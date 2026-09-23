@@ -1,8 +1,7 @@
 # Spatial Ecology in R
 Repo for the course
 
-<img width="500" height="357" alt="unnamed-chunk-17-2" src="https://github.com/user-attachments/assets/031b7a19-985e-4b1f-9a95-db0371d42d4f" />
-
+<img width="860" height="614" alt="scatter-color-1" src="https://github.com/user-attachments/assets/b64d8388-dade-4ad8-b343-c15eb4d5d4f0" />
 
 ## Course description
 
