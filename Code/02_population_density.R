@@ -25,12 +25,22 @@ bei.extra
 plot(bei.extra)
 
 # subsetting a datasets: NEX CONCEPT!
+# There are two different methods to make a subset:
+# first: name of the variable and the $ symbol
+# second: number of the layer and [] for tables, [[]]for map layers
 elevation <- bei.extra$elev
 # output
 elevation
 
 # Plot elevation
 plot(elevation)
+
+# subset by the number of the layer/variables
+elevation2 <- bei.extra[[1]]
+# in case bei.extra was a table: bei.extra[1]
+
+# plot the new object
+plot(elevation2)
 
 
 
