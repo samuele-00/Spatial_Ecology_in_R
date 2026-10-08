@@ -71,12 +71,16 @@ dev.off()
 # Change color in our maps
 cl <- colorRampPalette(c("blue", "green", "red"))
 
+# R colors are here:
+# https://r-charts.com/colors/
+
 # Plot the densitymap and change its colour thanks to cl
 plot(densitymap, col=cl)
 
 # Change color in our maps
 cl <- colorRampPalette(c("magenta2", "green", "mediumpurple"))
 plot(densitymap, col=cl)
+
 # Nuances
 cl3 <- colorRampPalette(c("magenta2", "green", "mediumpurple"))(3)
 plot(densitymap, col=cl3)
