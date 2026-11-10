@@ -216,7 +216,7 @@ For weighted networks, a large interaction weight is not automatically a large d
 **Betweenness centrality** measures how often a node lies on shortest paths between other nodes:
 
 $$
-b_i=\sum_{s<t;\ s,t\ne i}\frac{\sigma_{st}(i)}{\sigma_{st}},
+b_i = \sum_{s \lt t,\ s,t \neq i} \frac{\sigma_{st}(i)}{\sigma_{st}}
 $$
 
 where $\sigma_{st}$ is the number of shortest paths between $s$ and $t$, and $\sigma_{st}(i)$ counts those passing through $i$. This is the unnormalized definition for an undirected graph.
