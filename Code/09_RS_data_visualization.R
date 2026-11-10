@@ -40,7 +40,7 @@ plot(b4, col=cividis(100))
 # Exercise: import the near infrared band 
 b8 <- im.import("sentinel.dolomites.b8.tif")
 
-# Build a 4x4 multiframe and plot all of the bands with the default palette
+# Build a 2x2 multiframe and plot all of the bands with the default palette
 im.multiframe(2,2)
 plot(b2)
 plot(b3)
