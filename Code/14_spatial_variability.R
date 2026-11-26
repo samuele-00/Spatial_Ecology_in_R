@@ -83,7 +83,6 @@ plot(stacksd, col=plasma(100))
 # measuring the variability of the whole original image
 
 sentsd <- focal(sent,w=7, fun="sd")
-
 # layer 1 # NIR
 # layer 2 # red
 # layer 3 # green
@@ -96,4 +95,9 @@ plot(teststack)
 
 #scatterplot
 plot(sdNIR7x7,sentsd[[1]])
-cor(sdNIR7x7,sentsd[[1]])
+cor(sdNIR7x7,sentsd[[1]]) # the correlation could be done among vectors
+
+# the correlation could be done among vectors
+x<-values(sdNIR7x7)
+y<-values(sdNIR7x7)
+cor(x,y)
