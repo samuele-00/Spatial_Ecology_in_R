@@ -101,3 +101,7 @@ cor(sdNIR7x7,sentsd[[1]]) # the correlation could be done among vectors
 x<-values(sdNIR7x7)
 y<-values(sdNIR7x7)
 cor(x,y, use="complete.obs")
+#since cor=1 the 2 data are the same!
+
+
+sdNIR<-list
