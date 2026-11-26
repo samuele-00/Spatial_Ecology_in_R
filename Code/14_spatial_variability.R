@@ -45,3 +45,21 @@ plot(stackNIR)
 mean13x13NIR <- focal(sent[[1]],w=13, fun="mean")
 stackNIR <- c(sent[[1]], meanNIR, mean7x7NIR, mean13x13NIR)
 plot(stackNIR, col=inferno(100))
+
+#changin names to the stack
+names(stackNIR) <- c("original","mean3x3","mean7x7","mean13x13")
+stackNIR #check names
+plot(stackNIR, col=mako(100))
+
+#plotting two sets in a scatterplot
+plot(stackNIR[[2]],stackNIR[[4]], col="gray")
+abline(0,1,col="red") #y=x
+plot(stackNIR$mean_3,stackNIR$mean_13)
+
+# exercise: given the statistical function sd, calculate the sd of the NIR with a moving window of 3x3
+# sd 3x3
+# sd <- focal(sent[[1]],w=3, fun="sd") # avoid this ! otherwise you will overwrite the function
+sdNIR <- focal(sent[[1]],w=3, fun="sd")
+stacksd <- c(sent[[1]], sdNIR)
+plot(stacksd, col=cividis(100))
+plot(stacksd)
