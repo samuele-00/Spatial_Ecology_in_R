@@ -103,5 +103,16 @@ y<-values(sdNIR7x7)
 cor(x,y, use="complete.obs")
 #since cor=1 the 2 data are the same!
 
+# Loop
+sdNIR <- list()
 
-sdNIR<-list
+for (w in 1:27) {
+  if (w %% 2 == 1 && w > 1) {
+    sdNIR[[paste0("w", w)]] <- focal(
+      sent[[1]],
+      w = matrix(1, nrow = w, ncol = w),
+      fun = "sd"
+    )
+  }
+}
+
