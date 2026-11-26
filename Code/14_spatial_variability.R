@@ -63,3 +63,15 @@ sdNIR <- focal(sent[[1]],w=3, fun="sd")
 stacksd <- c(sent[[1]], sdNIR)
 plot(stacksd, col=cividis(100))
 plot(stacksd)
+
+# exercise: calculate the sd for:
+#7x7 pixels
+#13x13 pixels
+# and make a stack of all of the data: original,3x3,7x7,13x13
+# rename the inner layers of the stack
+
+sdNIR7x7 <- focal(sent[[1]],w=7, fun="sd")
+sdNIR13x13 <- focal(sent[[1]],w=13, fun="sd")
+stacksd <- c(sent[[1]], sdNIR, sdNIR7x7, sdNIR13x13)
+names(stacksd) <- c("original","sd3x3","sd7x7","sd13x13")
+plot(stacksd, col=cividis(100))
