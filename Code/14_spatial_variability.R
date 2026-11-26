@@ -94,4 +94,5 @@ sentsd <- focal(sent,w=7, fun="sd")
 teststack <- c(sdNIR7x7, sentsd[[1]])
 plot(teststack)
 
-
+#scatterplot
+plot(sdNIR7x7,sentsd[[1]])
