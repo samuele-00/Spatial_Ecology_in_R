@@ -96,3 +96,4 @@ plot(teststack)
 
 #scatterplot
 plot(sdNIR7x7,sentsd[[1]])
+cor(sdNIR7x7,sentsd[[1]])
