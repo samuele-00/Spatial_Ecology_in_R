@@ -73,5 +73,25 @@ plot(stacksd)
 sdNIR7x7 <- focal(sent[[1]],w=7, fun="sd")
 sdNIR13x13 <- focal(sent[[1]],w=13, fun="sd")
 stacksd <- c(sent[[1]], sdNIR, sdNIR7x7, sdNIR13x13)
+stacksd
+
 names(stacksd) <- c("original","sd3x3","sd7x7","sd13x13")
-plot(stacksd, col=cividis(100))
+stacksd
+
+plot(stacksd, col=plasma(100))
+
+# measuring the variability of the whole original image
+
+sentsd <- focal(sent,w=7, fun="sd")
+
+# layer 1 # NIR
+# layer 2 # red
+# layer 3 # green
+
+# the output images has 3 layers:
+# hypothesis: terra is calculating sd on every single layer
+# test: plotting the NIR sd vs the sd of the first layer of sent
+teststack <- c(sdNIR7x7, sentsd[[1]])
+plot(teststack)
+
+
